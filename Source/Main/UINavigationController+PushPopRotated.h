@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define SWIZZLE_BACK    true
+#define SWIZZLE_BACK    YES
 
 @interface UINavigationController (PushPopRotated)
 

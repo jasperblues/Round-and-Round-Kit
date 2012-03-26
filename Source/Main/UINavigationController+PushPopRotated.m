@@ -246,6 +246,7 @@ static char const* const animationStyleStackKey = "animationStyleStackKey";
         [self popViewControllerAnimated:animated];
         [[self class] jr_swizzleMethod:@selector(popViewControllerAnimated:)
                 withMethod:@selector(retrieveAnimationStyleAndPopViewControllerAnimated:) error:nil];
+        NSLog(@"Swizzled back");
     }
 }
 

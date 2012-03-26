@@ -32,7 +32,7 @@ handle back button behavior.
 
 #Example Video
 
-Here's an <a href="https://github.com/downloads/jasperblues/Round-and-Round-Kit/round-and-round-kit.swf">example video</a>
+<img src="https://github.com/downloads/jasperblues/Round-and-Round-Kit/round-and-round-kit1.gif"/>
 
 # Installation
 

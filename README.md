@@ -25,7 +25,7 @@ Clone the module and run the example.
 ```objective-c
 [navigationController popViewControllerRotated:YES];
 ```
-. . . or if using SWIZZLE_BACK (see below) just
+. . . or if using SWIZZLE_BACK (see below) just do a regular pop:
 
 ```objective-c
 [navigationController popViewControllerAnimated:YES];
@@ -35,9 +35,8 @@ Clone the module and run the example.
 
 Use SWIZZLE_BACK = YES (default) to tell the UINavigationController to track which animation style was used when 
 pushing a view controller. It will then apply the same when popping. The benefit of this is you don't have to do
-anything to handle back button behavior.
-
-If you don't want this behavior, set this option to NO in UINavigationController+PushPopRotated.h. 
+anything to handle back button behavior. The drawback is that we're poking around in places we might not be welcome
+. . . If you don't want this behavior, set this option to NO in UINavigationController+PushPopRotated.h. 
 
 #Example Video
 

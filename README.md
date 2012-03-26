@@ -27,8 +27,10 @@ Clone the module and run the example.
 ## Back button behavior 
 
 Use SWIZZLE_BACK = YES (default) to tell the UINavigationController to track which animation style was used when 
-pushing a view controller, and apply the same when popping. The benefit of this is you don't have to do anything to 
+pushing a view controller. It will then apply the same when popping. The benefit of this is you don't have to do anything to 
 handle back button behavior. 
+
+If you don't want this behavior, set this option to NO in UINavigationController+PushPopRotated.h. 
 
 #Example Video
 

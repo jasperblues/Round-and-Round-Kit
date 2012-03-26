@@ -20,7 +20,9 @@ Clone the module and run the example.
 
 ## Popping a view controller 
 
+```objective-c
 [navigationController popViewControllerRotated:YES];
+```
 
 ## Back button behavior 
 
@@ -30,7 +32,7 @@ handle back button behavior.
 
 #Example Video
 
-Coming shortly. 
+Here's an <a href="https://github.com/downloads/jasperblues/Round-and-Round-Kit/round-and-round-kit.swf">example video</a>
 
 # Installation
 

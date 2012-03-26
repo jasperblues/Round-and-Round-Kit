@@ -3,10 +3,13 @@
 Adds 3D rotating view transitions to UINavigationController. 
 
 I always liked how switching users on OSX rotates the view in a cube, and thought it would also be a nice way to 
-switch between contexts in iPhone applications. 
+switch between contexts in iPhone applications. There's a cube transition is in the iOS SDK, however it's a private API. So here's an open source implementation that does
+more or less the same thing. Key features are: 
 
-There's a cube transition is in the iOS SDK, however it's a private API. So here's an open source implementation that does
-more or less the same thing. 
+* Just one category to add to your project. 
+* Push with 3D rotations in one line. 
+* Back button behavior is taken care of - the category will know when to pop with rotation vs default animation style. 
+* No private API calls.                                         
 
 # Usage
 

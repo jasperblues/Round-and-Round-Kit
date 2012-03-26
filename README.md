@@ -32,7 +32,10 @@ handle back button behavior.
 
 #Example Video
 
-<img src="https://github.com/downloads/jasperblues/Round-and-Round-Kit/round-and-round-kit1.gif"/>
+'Scuse the poor quality video, but it seems that animated gif is the only format that will currently play inside a 
+README.md. 
+
+<img src="https://github.com/downloads/jasperblues/Round-and-Round-Kit/round-and-round.gif"/>
 
 # Installation
 

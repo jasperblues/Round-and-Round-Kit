@@ -38,7 +38,11 @@ Clone the module and run the example.
 
 Use SWIZZLE_BACK = YES (default) to tell the UINavigationController to track which animation style was used when 
 pushing a view controller. It will then apply the same when popping. The benefit of this is you don't have to do
-anything to handle back button behavior. The drawback is that we're poking around in places we might not be welcome
+anything to handle back button behavior. The drawback is that it's:
+
+* Discouraged (non banned) by Apple
+* May require updates for future iOS SDK versions. 
+
 . . . If you don't want this behavior, set this option to NO in UINavigationController+PushPopRotated.h. 
 
 #Example Video

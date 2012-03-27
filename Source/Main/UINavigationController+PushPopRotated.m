@@ -10,7 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "UINavigationController+PushPopRotated.h"
-#import "FirstViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 #import "JRSwizzle.h"

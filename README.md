@@ -54,7 +54,8 @@ README.md.
 
 # Limitations
 
-Currently the view does not update while a transition is in progress. It's necessary to set up the view beforehand. 
+Currently the view does not update during the 0.75secs that a transition is in progress. It's necessary to set up the
+view beforehand. 
 
 # Installation
 

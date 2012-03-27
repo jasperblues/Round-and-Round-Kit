@@ -13,6 +13,11 @@
 
 #define SWIZZLE_BACK    YES
 
+typedef enum {
+    LeftToRight = 0,
+    RightToLeft,
+} RotationDirection;
+
 @interface UINavigationController (PushPopRotated)
 
 - (void) pushViewController:(UIViewController*)controller rotated:(BOOL)rotated;

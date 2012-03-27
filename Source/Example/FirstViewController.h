@@ -13,11 +13,6 @@
 
 @class SecondViewController;
 
-typedef enum {
-    LeftToRight = 0,
-    RightToLeft,
-} RotationDirection;
-
 @interface FirstViewController : UIViewController {
 
 @private

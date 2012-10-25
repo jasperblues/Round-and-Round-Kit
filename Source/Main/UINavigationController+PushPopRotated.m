@@ -83,12 +83,12 @@ static char const* const animationStyleStackKey = "animationStyleStackKey";
     if (rotated) {
         CALayer* rotateLayer = [self makeLayer];
         CATransform3D world = CATransform3DMakeTranslation(0, 0, 0);
-        [rotateLayer addSublayer:[self makeSurfaceOn:world withView:self.view]];
+        [rotateLayer addSublayer:[self layerFromView:self.view withTransform:world]];
         world = CATransform3DRotate(world, radians(90), 0, 1, 0);
         world = CATransform3DTranslate(world, CUBESIZE, 0, 0);
 
         [self pushViewController:controller animated:NO];
-        [rotateLayer addSublayer:[self makeSurfaceOn:world withView:self.view]];
+        [rotateLayer addSublayer:[self layerFromView:self.view withTransform:world]];
 
         UIView* background = [self makeBackgroundWithColor:[UIColor blackColor]];
         [self.view addSubview:background];
@@ -123,7 +123,7 @@ static char const* const animationStyleStackKey = "animationStyleStackKey";
     if (rotated) {
         CALayer* rotateLayer = [self makeLayer];
         CATransform3D world = CATransform3DMakeTranslation(0, 0, 0);
-        [rotateLayer addSublayer:[self makeSurfaceOn:world withView:self.view]];
+        [rotateLayer addSublayer:[self layerFromView:self.view withTransform:world]];
         world = CATransform3DRotate(world, radians(90), 0, 1, 0);
         world = CATransform3DTranslate(world, CUBESIZE, 0, 0);
         world = CATransform3DRotate(world, radians(90), 0, 1, 0);
@@ -134,11 +134,11 @@ static char const* const animationStyleStackKey = "animationStyleStackKey";
         [self popViewControllerAnimated:NO];
         if (refreshNavBar) {
             UINavigationItem* item = [[self navigationBar] popNavigationItemAnimated:NO];
-            [rotateLayer addSublayer:[self makeSurfaceOn:world withView:self.view]];
+            [rotateLayer addSublayer:[self layerFromView:self.view withTransform:world]];
             [[self navigationBar] pushNavigationItem:item animated:NO];
         }
         else {
-            [rotateLayer addSublayer:[self makeSurfaceOn:world withView:self.view]];
+            [rotateLayer addSublayer:[self layerFromView:self.view withTransform:world]];
         }
 
         UIView* background = [self makeBackgroundWithColor:[UIColor blackColor]];
@@ -170,12 +170,12 @@ static char const* const animationStyleStackKey = "animationStyleStackKey";
     return rotateLayer;
 }
 
-- (CALayer*) makeSurfaceOn:(CATransform3D)world withView:(UIView*)view {
-    CGRect rect = CGRectMake(0, 0, PAGE_VERTICAL_WIDTH, PAGE_VERTICAL_HEIGHT);
+- (CALayer*) layerFromView:(UIView*)view {
+    CGRect rect = CGRectMake(0, 0, self.view.bounds.size.width, self.view.frame.size.height);
     CALayer* imageLayer = [CALayer layer];
     imageLayer.anchorPoint = CGPointMake(1, 1);
     imageLayer.frame = rect;
-    imageLayer.transform = world;
+
     UIGraphicsBeginImageContext(view.frame.size);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage* viewImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -184,6 +184,12 @@ static char const* const animationStyleStackKey = "animationStyleStackKey";
     return imageLayer;
 }
 
+- (CALayer*) layerFromView:(UIView*)view withTransform:(CATransform3D)transform
+{
+    CALayer *layer = [self layerFromView:view];
+    layer.transform = transform;
+    return layer;
+}
 - (UIView*) makeBackgroundWithColor:(UIColor*)color {
     UIView* background = [[UIView alloc] initWithFrame:self.view.frame];
     [background setBackgroundColor:color];

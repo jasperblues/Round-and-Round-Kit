@@ -52,6 +52,11 @@ README.md.
 
 <img src="https://github.com/downloads/jasperblues/Round-and-Round-Kit/round-and-round.gif"/>
 
+# Limitations
+
+Currently the view does not update during the 0.75secs that a transition is in progress. It's necessary to set up the
+view beforehand. 
+
 # Installation
 
 ## Option 1 - Source

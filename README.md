@@ -71,7 +71,7 @@ Not available yet.
 
 # Authors
 
-* Jasper Blues - jasper.blues@expanz.com
+* Jasper Blues - jasper@appsquick.ly
 * © 2012 Jasper Blues
 
 # LICENSE

@@ -40,7 +40,7 @@ Use SWIZZLE_BACK = YES (default) to tell the UINavigationController to track whi
 pushing a view controller. It will then apply the same when popping. The benefit of this is you don't have to do
 anything to handle back button behavior. The drawback is that it's:
 
-* Discouraged (but not banned) by Apple
+* You just swizzled a UIKit class. Discouraged (but not banned) by Apple
 * May require updates for future iOS SDK versions. 
 
 . . . If you don't want this behavior, set this option to NO in UINavigationController+PushPopRotated.h. 

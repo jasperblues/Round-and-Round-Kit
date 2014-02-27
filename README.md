@@ -1,3 +1,10 @@
+# Update Feb, 2014
+
+This is a pretty old project. I was fooling around with 3D, swizzling etc when I was learning Objective-C. You still might find something useful here. 
+
+* For 3D animations, set the m34 (perspective) matrix on a layer. Then apply some transformations. 
+
+
 # Description
 
 Adds 3D rotating view transitions to UINavigationController. 

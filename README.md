@@ -52,13 +52,6 @@ anything to handle back button behavior. The drawback is that it's:
 
 . . . If you don't want this behavior, set this option to NO in UINavigationController+PushPopRotated.h. 
 
-#Example Video
-
-'Scuse the poor quality video, but it seems that animated gif is the only format that will currently play inside a 
-README.md. 
-
-<img src="https://github.com/downloads/jasperblues/Round-and-Round-Kit/round-and-round.gif"/>
-
 # Limitations
 
 Currently the view does not update during the 0.75secs that a transition is in progress. It's necessary to set up the
